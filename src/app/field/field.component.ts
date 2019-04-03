@@ -23,19 +23,21 @@ export class FieldComponent implements OnInit {
 
 
 
-  // name(event){
-  //   const target = event.target;
-  //   const id = target.id;
-  //   console.log(id);
-  //   console.log(target);
-  //   const clickedID = this.clicked = id;
-  //   console.log(clickedID)
-  //   target.ngClass='color';
-  // }
 
-  onRightClick(event){
-    const target = event.target;
-    console.log(target + ' was right clicked');
+  leftClick(cell: Cell){
+    cell.clicked = 1;
+    console.log(cell)
+  }
+
+  rightClick(cell: Cell, id: number){
+    if (cell.clicked == 2) {
+      cell.clicked = 0;
+    } else if (cell.clicked == 1) {
+      return false;
+    } else {
+      cell.clicked = 2;
+    }
+    console.log(cell)
     return false;
   }
 
