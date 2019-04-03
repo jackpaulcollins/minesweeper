@@ -1,0 +1,27 @@
+.field{
+  display: grid;
+  width: 150px;
+  margin: auto;
+  top: -50%;
+  transform: translateY(50%);
+  grid-template-columns: 50px 50px 50px;
+  grid-template-rows: 50px 50px 50px;
+  text-align: center;
+}
+
+.grid-item{
+  border: 1px solid red;
+}
+
+
+.color{
+  background-color: red;
+}
+
+.flag{
+  background-color: blue;
+}
+
+.cell{
+  border: 1px solid green;
+}
