@@ -1,5 +1,5 @@
 <div class="field">
   <div class="cell" *ngFor="let cell of cells" (click)="leftClick(cell)" (contextmenu)="rightClick(cell)" [ngClass]="{'color': cell.clicked == 1, 'flag': cell.clicked == 2}">
-    <p>{{cell.id}}</p>
+    <!-- <p>{{cell.id}}</p> -->
   </div>
 </div>

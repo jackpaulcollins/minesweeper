@@ -7,6 +7,7 @@
   grid-template-columns: 50px 50px 50px;
   grid-template-rows: 50px 50px 50px;
   text-align: center;
+  background-color: darkgrey;
 }
 
 .grid-item{
@@ -15,11 +16,14 @@
 
 
 .color{
-  background-color: red;
+  background-color: lightgray;
 }
 
 .flag{
-  background-color: blue;
+  background-image: url(../../assets/images/flag.png);
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
 }
 
 .cell{
