@@ -1,5 +1,12 @@
-<div class="field">
-  <div class="cell" *ngFor="let cell of cells" (click)="leftClick(cell)" (contextmenu)="rightClick(cell)" [ngClass]="{'color': cell.clicked == 1, 'flag': cell.clicked == 2}">
-    <!-- <p>{{cell.id}}</p> -->
+<div class="mainContent">
+
+  <div class="field">
+    <div class="cell" *ngFor="let cell of cells" (click)="leftClick(cell)" (contextmenu)="rightClick(cell)" [ngClass]="{'color': cell.clicked == 1, 'flag': cell.clicked == 2, 'bomb': cell.mine == true && cell.clicked == 1}">
+      <!-- <p>{{cell.id}}</p> -->
+    </div>
+  </div>
+  <div class="form">
+    <input #difficulty type="number" required>
+    <button (click)="addMines(cells, difficulty.value)">Restart</button>
   </div>
 </div>
